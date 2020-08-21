@@ -18,25 +18,25 @@ const loadingInProgress = (state = false, action) => {
   }
 }
 
-const loadingSearch = (state = [], action) => {
-  switch (action.type) {
-    case 'LOADING_SUCCESS':
-      return action.articles
-    case 'CLEAR_REPOS':
-      return []
-    default:
-      return state
-  }
-}
+      const loadingSearch = (state = [], action) => {
+        switch (action.type) {
+          case 'LOADING_SEARCH':
+            return action.articlesByWord
+          case 'CLEAR_ARTICLES':
+            return []
+          default:
+            return state
+        }
+      }
 
-const loadingCategory = (state = [], action) => {
-  switch (action.type) {
-    case 'LOADING_CATEGORY':
-      return action.articles
-    default:
-      return state
-  }
-}
+      const loadingCategory = (state = [], action) => {
+        switch (action.type) {
+          case 'LOADING_CATEGORY':
+            return action.articlesByCategory
+          default:
+            return state
+        }
+      }
 
 export default combineReducers({
   loadingSearch,

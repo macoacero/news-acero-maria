@@ -29,7 +29,6 @@ body {
     }
   }
 }
-
 .menu{
   background-color: #FD8303;
   ul{
@@ -63,5 +62,28 @@ body {
     .title{
       font-weight: bold;
     }
+    .portal, .date{
+      color: grey;
+    }
+    .but-more{
+      color: #ffffff;
+      background: #FD8303;
+      padding: 2px 5px;
+      text-decoration: none;
+      border-radius: 3px;
+      font-size: 12px;
+      &:hover{
+        background: #FDA903;
+      }
+    }
+  }
+}
+.container.preloader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  .preloader{
+    width: 60px;
   }
 }

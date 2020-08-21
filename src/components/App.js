@@ -22,14 +22,13 @@ const App = () => (
   <div className="menu">
     <div className="container">
       <ul>
-        <li> <Link to="/Home">Home</Link> </li>
-        <li> <Link to="/Deportes">Deportes</Link> </li>
-        <li> <Link to="/Diseño">Diseño</Link> </li>
-        <li> <Link to="/Espectáculos">Espectáculos</Link> </li>
-        <li> <Link to="/Internacionales">Internacionales</Link> </li>
-        <li> <Link to="/Política">Política</Link> </li>
-        <li> <Link to="/Tecnología">Tecnología</Link> </li>
-        <li> <Link to="/Resultados">Resultados</Link> </li>
+        <li> <Link to="/home">Home</Link> </li>
+        <li> <Link to="/deportes">Deportes</Link> </li>
+        <li> <Link to="/diseno">Diseño</Link> </li>
+        <li> <Link to="/espectaculos">Espectáculos</Link> </li>
+        <li> <Link to="/internacionales">Internacionales</Link> </li>
+        <li> <Link to="/politica">Política</Link> </li>
+        <li> <Link to="/tecnologia">Tecnología</Link> </li>
       </ul>
     </div>
   </div>
