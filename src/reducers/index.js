@@ -19,7 +19,6 @@ const loadingInProgress = (state = false, action) => {
 }
 
 const articlesByWord = (state = [], action) => {
-  debugger
   switch (action.type) {
     case 'LOADING_SEARCH':
       return action.articles
