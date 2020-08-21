@@ -4,18 +4,15 @@ import { getCategory } from '../actions'
 
 
 const mapStateToProps = state => {
-  console.log('state', state)
+  console.log('state', state.articles, state.loadingError)
   return {
   articles: state.articles,
   hasError: state.loadingError,
   isLoading: state.loadingInProgress
-  
 }};
 
-console.log()
-
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onLoad:  (id) => dispatch(getCategory(id))
+  onLoad:  (id) => dispatch(getCategory(id)),
 });
 
 

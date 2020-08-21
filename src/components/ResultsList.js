@@ -47,7 +47,7 @@ const ResultsList = ({ articles, onLoad, hasError, isLoading }) => {
     )
   }
 
-  console.log('articles',articles)
+  console.log('articles List',articles)
 
   return (
     <div className="container-fluid">

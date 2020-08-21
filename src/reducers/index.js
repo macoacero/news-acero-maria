@@ -19,10 +19,11 @@ const loadingInProgress = (state = false, action) => {
 }
 
 const articlesByWord = (state = [], action) => {
+  debugger
   switch (action.type) {
     case 'LOADING_SEARCH':
       return action.articles
-    case 'CLEAR_CATEGORY':
+    case 'CLEAR_ARTICLES':
       return []
     default:
       return state
@@ -39,8 +40,8 @@ const articleByCategory = (state = [], action) => {
 }
 
 export default combineReducers({
-  articleByCategory,
   articlesByWord,
+  articleByCategory,
   loadingError,
   loadingInProgress
 })

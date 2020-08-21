@@ -8,6 +8,7 @@ import {
   Link,
 } from 'react-router-dom';
 import SearchResults from '../containers/SearchResults';
+// import News from "./News";
 
 const App = () => (
 

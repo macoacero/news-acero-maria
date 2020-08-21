@@ -54,7 +54,10 @@ export const getSearch = word => {
         return response
       })
       .then((response) => response.json())
-      .then((articles) => dispatch(loadingSearch(articles.slice(0,10))))
+      .then((articles) => {
+        console.log('articles', articles)
+        return dispatch(loadingSearch(articles.slice(0,10))
+        )})
       .catch(() => dispatch(loadingError(true)))
   }
 }
