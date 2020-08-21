@@ -18,18 +18,18 @@ const loadingInProgress = (state = false, action) => {
   }
 }
 
-const articlesByWord = (state = [], action) => {
+const loadingSearch = (state = [], action) => {
   switch (action.type) {
-    case 'LOADING_SEARCH':
+    case 'LOADING_SUCCESS':
       return action.articles
-    case 'CLEAR_ARTICLES':
+    case 'CLEAR_REPOS':
       return []
     default:
       return state
   }
 }
 
-const articleByCategory = (state = [], action) => {
+const loadingCategory = (state = [], action) => {
   switch (action.type) {
     case 'LOADING_CATEGORY':
       return action.articles
@@ -39,8 +39,8 @@ const articleByCategory = (state = [], action) => {
 }
 
 export default combineReducers({
-  articlesByWord,
-  articleByCategory,
+  loadingSearch,
+  loadingCategory,
   loadingError,
   loadingInProgress
 })

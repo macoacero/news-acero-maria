@@ -72,5 +72,5 @@ const ResultsList = ({ articles, onLoad, hasError, isLoading }) => {
   )
 }
 
-
 export default ResultsList;
+

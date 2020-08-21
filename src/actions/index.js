@@ -16,7 +16,7 @@ export const loadingInProgress = bool => (
 
 export const loadingSearch = articles => (
   {
-    type: 'LOADING_SEARCH',
+    type: 'LOADING_SUCCESS',
     articles
   }
 )
@@ -30,12 +30,11 @@ export const loadingCategory = articles => (
 
 export const clearRepos = () => (
   {
-    type: 'CLEAR_CATEGORY'
+    type: 'CLEAR_REPOS'
   }
 )
 
 export const getSearch = word => {
-  
   return dispatch => {
     dispatch(clearRepos())
 
@@ -54,10 +53,7 @@ export const getSearch = word => {
         return response
       })
       .then((response) => response.json())
-      .then((articles) => {
-        console.log('articles', articles)
-        return dispatch(loadingSearch(articles.slice(0,10))
-        )})
+      .then((articles) => dispatch(loadingSearch(articles.slice(0,10))))
       .catch(() => dispatch(loadingError(true)))
   }
 }
@@ -97,3 +93,4 @@ export const getCategory = (categoryId) => {
       .catch(() => dispatch(loadingError(true)))
   }
 }
+

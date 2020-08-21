@@ -1,20 +1,16 @@
-import { connect } from 'react-redux';
-import ResultsList from '../components/ResultsList';
+import { connect } from 'react-redux'
+import ResultsList from '../components/ResultsList'
 import { getCategory } from '../actions'
 
-
-const mapStateToProps = state => {
-  console.log('state', state.articles, state.loadingError)
-  return {
-  articles: state.articles,
+const mapStateToProps = state => ({
+  articles: state.loadingSearch,
   hasError: state.loadingError,
   isLoading: state.loadingInProgress
-}};
+})
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onLoad:  (id) => dispatch(getCategory(id)),
 });
-
 
 export default connect(
   mapStateToProps,

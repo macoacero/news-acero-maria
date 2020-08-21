@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const SearchMenu = ({ defaultUser, onSearch, onClear }) => {
+const SearchMenu = ({ defaultWord, onSearch, onClear }) => {
   let _input;
 
   return (
@@ -21,7 +21,7 @@ const SearchMenu = ({ defaultUser, onSearch, onClear }) => {
         placeholder="Búsqueda por palabra"
         aria-label=""
         aria-describedby="basic-addon1"
-        defaultValue={defaultUser}
+        defaultValue={defaultWord}
         ref={node => (_input = node)}
       />
       <button
@@ -36,3 +36,5 @@ const SearchMenu = ({ defaultUser, onSearch, onClear }) => {
 };
 
 export default SearchMenu;
+
+

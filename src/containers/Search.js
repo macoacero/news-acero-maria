@@ -3,7 +3,7 @@ import { getSearch, clearRepos } from '../actions'
 import SearchMenu from '../components/SearchMenu'
 
 const mapStateToProps = (state, ownProps) => ({
-  defaultUser: ownProps.word
+  defaultWord: ownProps.defaultWord
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
