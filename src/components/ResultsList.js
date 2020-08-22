@@ -10,20 +10,19 @@ const ResultsList = ({ articlesByCategory, articlesByWord, onLoad, hasError, isL
   let { id } = useParams();
 
   useEffect(() => {
-  
-    if(id === "home"){
+    if(!id){
       id = 0
-    } else if (id === "deportes"){
-      id = 1
-    } else if (id === "diseno"){
-      id = 2
-    } else if (id === "espectaculos"){
-      id = 3
-    } else if (id === "internacionales"){
-      id = 4
     } else if (id === "politica"){
-      id = 5
+      id = 1
+    } else if (id === "internacionales"){
+      id = 2
     } else if (id === "tecnologia"){
+      id = 3
+    } else if (id === "espectaculos"){
+      id = 4
+    } else if (id === "deportes"){
+      id = 5
+    } else if (id === "diseno"){
       id = 6
     }
     onLoad(id);
