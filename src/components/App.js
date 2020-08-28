@@ -14,7 +14,7 @@ const App = () => (
       <Router>
         <div className="main-img">
           <div className="container">
-            <Search word="" />
+            {/* <Search word="" /> */}
           </div>
         </div>
 
