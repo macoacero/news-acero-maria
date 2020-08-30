@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import moment from 'moment';
 import DefaultImg from '../images/news.png';
 import { useParams } from "react-router-dom";
 import Loading from '../images/loading.gif'
 
 
-const ResultsList = ({ articlesByCategory, articlesByWord, onLoad, hasError, isLoading }) => {
+const ResultsList = ({ articlesByCategory, articlesByWord, onClear, onLoad, hasError, isLoading }) => {
 
   let { id } = useParams();
 
@@ -25,6 +24,7 @@ const ResultsList = ({ articlesByCategory, articlesByWord, onLoad, hasError, isL
     } else if (id === "diseno"){
       id = 6
     }
+    onClear();
     onLoad(id);
   }, [id]);
 

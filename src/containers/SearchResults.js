@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import ResultsList from '../components/ResultsList'
-import { getCategory } from '../actions'
+import { getCategory, clearRepos } from '../actions'
 
 const mapStateToProps = state => ({
   articlesByCategory: state.loadingCategory,
@@ -11,6 +11,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onLoad:  (id) => dispatch(getCategory(id)),
+  onClear: () => dispatch(clearRepos())
 });
 
 export default connect(
